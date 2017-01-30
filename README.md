@@ -11,3 +11,6 @@ Special thanks to Kevin Hoffman for the assistance linking the ACF Gallery with 
 A gist with the code for combining WP + ACF Gallery + Photoswipe + Isotope code can be found here. https://gist.github.com/alynefrancis/d53bc6b27fd4f3e649d9
 
 This theme is an ongoing work in progress. 
+
+
+( note to self: wp_desertpt1/ )
