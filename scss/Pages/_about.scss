@@ -1,0 +1,40 @@
+//intro-content styled in base.scss
+
+.about-images {
+    @include span-columns (12);
+    @media only screen and (min-width : 320px) {
+        padding: 2% 1%;
+    }
+    @media only screen and (min-width : 600px) {
+        padding: 0%;
+    }
+    @media only screen and (min-width : 768px) {
+        padding: 0 7%;
+    }
+} 
+.about-image {
+    overflow: hidden; 
+        @media only screen and (min-width : 320px) {
+            @include span-columns (12 of 12);
+            margin: 5% 0;
+            max-height: 270px;
+        }
+        @media only screen and (min-width : 600px) {
+            @include span-columns (4 of 12);
+            max-height: 240px;
+        }
+
+        &img {
+            /* corrects inline gap in enclosing div */
+            display: block;
+            max-width: 100%;
+            /* just in case, to force correct aspect ratio */
+            height: auto !important;
+            width: auto\9; /* ie8+9 */
+            /* lt ie8 */
+            -ms-interpolation-mode: bicubic; 
+            border: 1px solid white; 
+        }
+}
+
+

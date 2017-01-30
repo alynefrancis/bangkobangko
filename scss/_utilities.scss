@@ -1,0 +1,92 @@
+// ==========================================================================
+// Utilities
+// ==========================================================================
+
+// Import if Google Fonts URL is defined
+//**introspective function that returns whether a variable with a given name exists in our project**
+
+@if variable-exists(font-url--google) {
+	@import url($font-url--google);
+}
+@if variable-exists(font-url--google2) {
+  @import url($font-url--google2);
+}
+@if variable-exists(font-url--google3) {
+  @import url($font-url--google3);
+}
+@if variable-exists(font-url--google4) {
+  @import url($font-url--google4);
+}
+@if variable-exists(font-url--allfont) {
+  @import url($font-url--allfont);
+}
+@if variable-exists(font-url--allfont2) {
+  @import url($font-url--allfont2);
+}
+
+
+// Calculate em values
+//making the default context our base font size and therefore making this parameter optional
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
+}
+	
+// Call the color palette modifiers with a default of base
+// write this so we can link our palettes in config with an easy entry to our base file 
+//ex:s
+// h1 {
+// color: palette(grey, x-dark);
+// }
+//map-get is a sass function that returns ($map, $key)
+// @function palette($palette, $shade: 'base') {
+//   @return map-get(map-get($palettes, $palette), $shade);
+// }
+
+// Mixins
+ 
+//a mixin for using our $ui-colors declared in config  
+//example  -where $ui-colors is defined in config
+//   .btn,
+//   .progbar,
+//   .tool-tip {
+//   @include bg-colors($ui-colours);
+// }
+@mixin bg-colors($map) {
+	@each $theme, $color in $map {
+		&--#{$theme} {
+			background-color: $color;    
+		}
+	}
+}
+
+// For adding background images 
+@mixin img-replace($img, $w, $h, $disp: block) {
+   background-image: url('#{$path--rel}/#{$img}');
+   background-repeat: no-repeat;
+   width: $w;
+   height: $h;
+   display: $disp;
+}
+   
+// for generating pseudo element shapes p-el(type, width, height) with null making it optional
+@mixin p-el(
+    $el,
+    $el-w: null,
+    $el-h: null) {
+    
+    @if $el == "before" or $el == "after" {
+      &:#{$el} {
+        @extend %pseudos;
+        width: $el-w;
+        height: $el-h;
+        @content;
+        //add content so that you can pass more styles into a rule
+      }
+     }
+     @else {
+      @error "`#{$el}` is not a valid pseudo-element.";
+     }     
+}
+   
+   
+  

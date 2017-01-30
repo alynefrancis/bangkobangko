@@ -1,0 +1,52 @@
+/*!
+Theme Name: bangkbangko.com
+Theme URI: http://bangkobangko.com
+Author: Alyne Francis
+Author URI: http://alynefrancis.com
+Description: A custom theme built for B. Heick.
+Version: 1.0
+License: The MIT License (MIT)
+License URI: http://opensource.org/licenses/MIT
+Text Domain: bangkobangko
+
+*/
+
+@import "libraries/bourbon/bourbon.scss";
+@import "libraries/neat/neat.scss";
+@import "_reset.scss";
+
+
+//Defining
+@import "_config.scss";
+// @import "_utilities";
+
+//Global Styles
+@import "_base.scss";
+
+
+//Page Specifics
+@import "Pages/_header.scss";
+@import "Pages/_nav.scss";
+@import "Pages/_titlepage.scss";
+@import "Pages/_about.scss";
+@import "Pages/_stories.scss";
+@import "Pages/_fullstory.scss";
+@import "Pages/_contact.scss";
+@import "Pages/_titlepage.scss";
+@import "Pages/_gallery.scss";
+@import "Pages/_thankyou.scss";
+@import "Pages/_legends.scss";
+@import "Pages/_footer.scss";
+@import "Pages/_sidebar.scss";
+@import "Pages/_videos.scss";
+@import "Pages/_searchresults.scss";
+
+
+
+//generally import like this where all of the files in theses three subfolders have been imported into the index.scss file
+//@import 'base/index';
+// @import 'layout/index';
+// @import 'components/index'
+
+
+

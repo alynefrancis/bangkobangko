@@ -1,0 +1,316 @@
+
+.wrapper-contact ,
+.wrapper-form {
+    padding: 4%;
+    @media only screen and (min-width : 320px) {
+        @include span-columns(12);
+    }
+
+    @media only screen and (min-width : 768px) {
+            @include span-columns(6);
+            margin-right: 0;
+    }
+
+}
+.wrapper-form {
+    @media only screen and (min-width : 768px) {
+        padding-right: 0;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+.wrapper-contact {
+    color: $color-font--dark;
+    padding-top: 6%;
+
+     p:first-child:first-letter  {
+         float: left; 
+         color: $title; 
+         line-height: 0.5em; 
+        
+             @media only screen and (min-width : 320px) {
+                 padding-top: em(12px); 
+                 font-size: em(40px); 
+                 padding-right: em(10px); 
+             }
+             @media only screen and (min-width : 600px) {
+                 padding-top: em(14px); 
+                 font-size: em(50px); 
+             }
+             @media only screen and (min-width : 768px) {
+                 padding-top: em(12px); 
+                 font-size: em(50px); 
+             }
+     }
+    
+}
+
+
+.contact-request {
+
+    i {
+        position: absolute;
+        display: inline;
+        background-color: $color-font--dark;
+        color: $color-font--light;
+        font-size: 2rem;
+        border-radius: 50%;
+        line-height: 1;
+        margin: 0 0 0 -1;
+        vertical-align: middle;
+        padding: .25em .45em;
+    }
+}
+
+textarea, 
+select {
+    background-color: transparent;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: em(26px);
+    color: $color-font--light;
+}
+
+
+// Buttons
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// modifications to contact 7 form
+.form .wpcf7-form-control-wrap input{
+    
+    width: 90%;
+
+}
+
+.button {
+    display: inline-block;   
+    padding: 0 em(30px);
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid $color-font--dark;
+    cursor: pointer;
+
+    @media only screen and (min-width : 320px) {
+        height: em(24px);
+        font-size: 14px;
+    }
+    @media only screen and (min-width : 600px) {
+        height: em(40px);
+    }
+
+
+}
+
+input {
+    &[type="submit"],
+    &[type="reset"],
+    &[type="button"] {
+        display: inline-block;
+        // height: em(38px);
+        padding: 6px 30px;    
+        text-align: center;
+        font-size: 11px;   
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;   
+        background-color: transparent;
+        border: 1px solid $color-font--dark;
+        cursor: pointer;
+        border-radius: 4px;
+        @media only screen and (min-width : 320px) {
+            height: em(36px);
+            font-size: em(14px);
+        }
+        @media only screen and (min-width : 600px) {
+            height: em(36px);
+            font-size: em(15px);
+        }
+    
+    }
+}
+
+.button:hover,
+button:hover {
+    color: $title;
+    border-color: white;
+    outline: 0;
+}
+
+input {
+    &[type="submit"]:hover,
+    &[type="reset"]:hover,
+    &[type="button"]:hover {
+        color: $color-font--light;
+        border-color: $title;
+    }
+}
+
+.button:focus,
+button:focus {
+    color: $color-font--light;
+    outline: 0;
+}
+
+input {
+    &[type="submit"]:focus,
+    &[type="reset"]:focus,
+    &[type="button"]:focus {
+    color: $color-font--light;
+    outline: 0;
+    }
+}
+
+.button.button-primary,
+button.button-primary {
+    color: $color-font--light;
+    background-color: transparent;
+}
+
+input {
+    &[type="submit"].button-primary,
+    &[type="reset"].button-primary,
+    &[type="button"].button-primary {
+        color: $color-font--light;
+        border: 1px solid $color-font--dark;
+    }
+}
+
+.button.button-primary:hover,
+button.button-primary:hover {
+    color: $color-font--light;
+    background-color: $title;
+    border-color: $title;
+}
+
+input {
+    &[type="submit"].button-primary:hover,
+    &[type="reset"].button-primary:hover,
+    &[type="button"].button-primary:hover {
+        color: $color-font--light;
+        border-color: $title;
+    }
+}
+
+.button.button-primary:focus,
+button.button-primary:focus {
+    color: $color-font--light;
+    background-color: transparent;
+    border-color: $title;
+}
+
+input {
+    &[type="submit"].button-primary:focus,
+    &[type="reset"].button-primary:focus,
+    &[type="button"].button-primary:focus {
+        color: $color-font--light;
+        border-color: $title;
+    }
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        padding: 6px 30px; // The 6px vertically centers text on FF, ignored by Webkit
+        background-color: transparent;
+        border: 1px solid grey;
+        box-shadow: none;
+        border-radius: 4px;
+         margin-bottom: em(26px);
+         @media only screen and (min-width : 320px) {
+             height: em(36px);
+             font-size: em(14px);
+         }
+         @media only screen and (min-width : 600px) {
+             height: em(36px);
+             font-size: em(16px);
+         }
+
+    }
+}
+
+// forms
+
+textarea,
+select {
+    height: 38px;
+    padding: 6px 0px; // The 6px vertically centers text on FF, ignored by Webkit
+    border: 1px solid $color-font--dark;
+    box-shadow: none;
+    font-size: em(16px);
+    color: $color-font--light;
+}
+
+// Removes awkward default styles on some inputs for iOS
+input {
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+        appearance: none;
+    }
+}
+
+textarea {
+    appearance: none;
+    min-height: 220px; /*changed this*/
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding: em(20px) em(10px);
+    font-size: 15px;
+    border: 1px solid $color-font--dark;
+
+}
+
+input {
+    &[type="email"]:focus,
+    &[type="number"]:focus,
+    &[type="search"]:focus,
+    &[type="text"]:focus,
+    &[type="tel"]:focus,
+    &[type="url"]:focus,
+    &[type="password"]:focus {
+        border: 1px solid $title;
+        outline: 0;
+    }
+}
+
+textarea:focus,
+select:focus {
+    border: 1px solid $title;
+    outline: 0;
+}
+
+label,
+legend {
+    display: block;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+fieldset {
+    padding: 0;
+    border-width: 0;
+}
+
+input {
+    &[type="checkbox"],
+    &[type="radio"] {
+        display: inline;
+    }
+}
+
+label > .label-body {
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: 100;
+    font-size: em(15px);
+}
+

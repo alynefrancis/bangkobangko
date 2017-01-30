@@ -1,0 +1,55 @@
+
+
+.each-video {
+    @include span-columns (12);
+    margin-top: 5%;
+
+}
+
+.video-container,
+.video-description {
+	
+	@media only screen and (min-width : 320px) {
+		@include span-columns (12);
+		margin: 20px 0;
+		
+	}
+	@media only screen and (min-width : 768px) {
+		padding: 0 8%;
+	}
+
+	@media only screen and (min-width : 1024px) {
+		@include span-columns (6);
+		margin: 0;
+		padding: 0;
+
+		
+	} 
+
+} 
+
+.video-description {
+	border-top: 1px solid $color-font--dark;
+
+	@media only screen and (min-width : 320px) {
+		h1 {
+			margin-top: 18%;
+		}
+	}
+	@media only screen and (min-width : 600px) {
+		h1 {
+			margin-top: 14%;
+		}
+	}
+	@media only screen and (min-width : 1024px) {
+		padding: 0 30px;
+		border-top: none;
+			h1 {
+				margin-top: em(10px);
+			}
+	}
+	p {
+		color: $color-font--dark;
+	}
+}
+

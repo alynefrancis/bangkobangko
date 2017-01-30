@@ -1,0 +1,94 @@
+
+
+header {
+    background-color: $color-background--header;
+}
+
+.gallery-links{
+    @include span-columns (12);
+
+}
+
+
+.section-image {
+
+    @media only screen and (min-width : 0px){
+      @include span-columns(12 of 12);   
+        padding-bottom: 2%;
+    }
+     @media only screen and (min-width : 480px) {
+        padding-bottom: 8%;
+     }
+
+    @media only screen and (min-width : 768px){
+        @include span-columns(6 of 12);
+        margin-right: inherit;
+        padding-bottom: 4%;
+            &:nth-child(odd) {
+                margin-right: 2.35765%;
+            }
+    }  
+    @media only screen and (min-width : 1042px) {
+        @include span-columns(4 of 12);
+            &:nth-child(3) {
+                 margin-right: 0;
+            }   
+    }
+}
+
+
+.item {
+    /* max-width: 1200px; /* img src width (if known) */
+    max-height: 260px;
+    overflow: hidden; 
+    text-align: center; /*to keep centered when img size drops on mobile */
+        
+        @media only screen and (min-width : 320px){
+            max-height: 240px;     
+        }
+        @media only screen and (min-width : 480px){
+            max-height: 300px;     
+        }
+        @media only screen and (min-width : 600px){
+            max-height: 330px;     
+        }
+        @media only screen and (min-width : 600px){
+            max-height: 350px;     
+        }
+        @media only screen and (min-width : 768px){
+            max-height: 234px;     
+        }
+        @media only screen and (min-width : 900px){
+            max-height: 270px;     
+        }
+        @media only screen and (min-width : 1000px){
+            max-height: 300px;     
+        }
+        @media only screen and (min-width : 1042px){
+            max-height: 205px;     
+        }
+        @media only screen and (min-width : 1150px){
+            max-height: 220px;     
+        }
+         @media only screen and (min-width : 1220px){
+            max-height: 240px;     
+        }
+
+    &:hover {
+        opacity: 0.4;
+        z-index: 1; /*because, opacity*/
+    }
+    &img {
+        /* corrects inline gap in enclosing div */
+        display: inline-block;
+        max-width: 100%;
+        /* just in case, to force correct aspect ratio */
+        height: auto !important;
+        width: auto\9; /* ie8+9 */
+        /* lt ie8 */
+        -ms-interpolation-mode: bicubic; 
+        max-height: 270px;  
+    }
+
+}
+

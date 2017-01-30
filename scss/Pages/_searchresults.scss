@@ -1,0 +1,124 @@
+.new-category {
+	@include span-columns (12);
+	display: inline-block !important;
+	padding-left: 0;
+	text-align: center;
+
+	a {
+		color: $blog-sidebar-links;
+		text-transform: uppercase;
+		 @media only screen and (min-width : 320px) {
+			font-size: 14px;
+		}
+		 @media only screen and (min-width : 600px) {
+			font-size: 15px;
+		}
+		
+	}
+
+	a::after {
+	    content: "|";
+	    padding: 0 0.3rem 0 0.5rem;
+	    color: $color-font--light;
+	}
+	a:last-of-type::after,
+	a:nth-last-of-type(2)::after {
+	    content: "";
+	}
+	a:last-child {
+		color: $color-font--light;
+	}
+	ul br {
+		display: none;
+	}
+}
+
+.new-archive {
+	@include span-columns (12);
+	text-align: center;
+	li {
+		list-style: none;
+		display: inline-block;
+
+
+		a {
+			color: $blog-sidebar-links;
+			text-transform: uppercase;
+			 @media only screen and (min-width : 320px) {
+				font-size: 14px;
+			}
+			 @media only screen and (min-width : 600px) {
+				font-size: 15px;
+			}
+		}
+
+		a::after {
+		    content: "|";
+		    padding: 0 0.3rem 0 0.5rem;
+		    color: white;
+		}
+	}
+}
+.category-results,
+.search-results,
+.archive-results,
+.error404 {
+	@include span-columns (12);
+	h1 {
+		text-align: center;
+		line-height: 1.6;
+		@media only screen and (min-width : 320px) {
+		    font-size: em(22px);
+		}
+		@media only screen and (min-width : 600px) {
+		    font-size: em(26px);
+		}	
+		@media only screen and (min-width : 1024px) {
+		    font-size: em(30px);
+		}	
+		span{
+			color: $blog-sidebar-links;
+			text-transform: uppercase;
+		}		
+	}
+	
+}
+
+.search {
+	@include span-columns (12);
+}
+
+.not-found  {
+	@include span-columns (12);
+
+	p {
+		text-align: center;
+		padding: 0 15%;
+		@media only screen and (min-width : 320px) {
+		    padding: 0 2%;
+		}
+		@media only screen and (min-width : 600px) {
+		    padding: 0 5%;
+		}	
+		@media only screen and (min-width : 1024px) {
+		    padding: 0 15%;
+		}	
+	}
+
+	#searchform {
+		text-align: center;
+		padding-top: 2%;
+	}
+}
+
+.new-search{
+	text-align: center;
+	padding-top: 3%;
+}
+
+input.searchsubmit {
+	display: none;
+}
+
+
+

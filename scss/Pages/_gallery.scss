@@ -1,0 +1,161 @@
+
+
+.gallery-filter {
+    @include span-columns (12);
+    padding: 0 2%;
+    padding-bottom: 2%;
+
+    ul#filters {
+        padding-left: 0;
+        margin-bottom: 0;
+            
+    }
+    #filters li {
+        display: inline-block;        
+        border: 1px solid $color-font--dark;
+        margin: 1%;
+            @media only screen and (min-width : 320px){
+                padding: 2px 4px;
+            }
+            @media only screen and (min-width : 600px){
+                padding: 6px 12px;
+            }
+
+        }
+
+    #filters li a {    
+        color: $color-font--dark;
+        text-decoration: none;
+            @media only screen and (min-width : 320px){
+                 font-size: 13px;
+            }
+            @media only screen and (min-width : 600px){             
+                 font-size: 16px;
+            }
+            &:hover {
+                color: $color-font--light;
+            }
+    }
+
+    #filters li:hover {
+        background: $color-font--dark;
+        background: $title;
+        
+    }
+    /*Let's make the active job type a different color as well*/
+    #filters li.active  {
+        background: #f85d7e;
+    }
+
+} //closes main gallery
+
+
+.gallery_container { 
+    transition-duration: 1s;
+    @include span-columns (12);
+    margin: 0 auto; 
+    text-align: center;
+        @media only screen and (min-width : 320px) {
+            padding: 8% 2% 4% 2%;
+        }
+         @media only screen and (min-width : 600px) {
+            padding: 0 1% 1%;
+        }
+    
+    
+}
+.iosotope {
+    transition-duration: 1s
+}
+.gallery-nav {
+    @include span-columns(12);
+    text-align: center;
+    padding: 2%;
+    a {
+
+        @media only screen and (min-width : 320px) {
+            padding: 0 em(10px);
+        }
+         @media only screen and (min-width : 600px) {
+            padding: 0 em(20px);
+        }
+        
+    }
+}
+
+.gallery-image {
+// eliminated neat columns include here and just floated images
+// this is because Isotope is remembering when images have margin set to zero and therefore ruins layout
+    overflow: hidden; 
+    float: left;
+    text-align: center;
+    background-color: $color-background--body;
+
+        // &img {
+        //     /* corrects inline gap in enclosing div */
+        //     display: block;
+        //     max-width: 100%;
+        //     /* just in case, to force correct aspect ratio */
+        //     height: auto !important;
+        //     width: auto\9; /* ie8+9 */
+        //     /* lt ie8 */
+        //     -ms-interpolation-mode: bicubic; 
+        // }
+
+    @media only screen and (min-width : 320px) {
+         width: 95%; //leftover after margin and padding margin and padding
+         margin: 0.5%;
+         // max-height: 165px;
+         // margin-bottom: 4%;
+    }
+    @media only screen and (min-width : 375px) {
+        // max-height: 215px;
+        margin-bottom: 4%;
+    }
+    @media only screen and (min-width : 420px) {
+        // max-height: 235px;
+    }
+    @media only screen and (min-width : 480px) {
+        // max-height: 265px;
+    }
+    @media only screen and (min-width : 520px) {
+        // max-height: 300px;
+    }
+
+    @media only screen and (min-width : 600px) {
+        width: 47%;
+        margin: 1%;
+        margin-bottom: 0.5%;
+        // max-height: 160px;
+    }
+
+    @media only screen and (min-width : 700px) {
+        // max-height: 200px;
+    }
+
+    @media only screen and (min-width : 768px) {
+        // max-height: 145px;
+        width: 31.2%;
+        margin: 0.7%;
+        margin-bottom: 0.4%;
+    }
+
+    @media only screen and (min-width : 870px) {
+        // max-height: 160px;
+    }
+
+    @media only screen and (min-width : 1024px) {
+        width: 23.1%;
+        margin-bottom: 0.5%;
+        // max-height: 145px;
+
+    }
+    @media only screen and (min-width : 1200px) {
+            // max-height: 160px;
+    }
+}
+
+
+
+
+

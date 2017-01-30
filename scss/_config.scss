@@ -1,0 +1,87 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+
+@font-face {
+    font-family: 'zapfino_linotype_oneregular';
+    src: url('fonts/zapfinolinotypeone-webfont.eot');
+    src: url('fonts/zapfinolinotypeone-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/zapfinolinotypeone-webfont.woff2') format('woff2'),
+         url('fonts/zapfinolinotypeone-webfont.woff') format('woff'),
+         url('fonts/zapfinolinotypeone-webfont.ttf') format('truetype'),
+         url('fonts/zapfinolinotypeone-webfont.svg#zapfino_linotype_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+// Font Stacks
+
+$font-family--primary       : 'Raleway', 'HelveticaNeue','Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary     : 'Merriweather', serif;
+$font-family--logo          : 'Allura', 'Brush Script MT', cursive;
+$font-family--legends       : 'zapfino_linotype_oneregular';
+
+
+
+
+// Descriptive Base Colors
+
+$white          : #fff;
+$black          : lighten(#0b0b0b, 5%);
+$grey           : #878787;
+
+
+//backgrounds
+
+$ebony-clay     : #1C1E20;
+$vulcan         : #14161D;
+$black-pearl    : #22282D;
+$shark          : #32373C;
+
+
+//body text
+$silver-chalice : #ababab; 
+$wild-sand		: #f5f5f5;
+
+//colors
+
+$monza  		  : #cc0814;
+$emerald          : #5ece7f;
+$cornflower-blue  : #5695B7;
+$crimson-red      : #990000;
+$maroon           : #850300;
+$french-pass       : #BFECFD;
+
+
+// Color Usage
+
+$color-font--light  		: $wild-sand;
+$color-font--dark   		: lighten($silver-chalice, 5%);
+$color-background--body     : $ebony-clay;
+// $color-background--header   : $black-pearl;
+$color-background--header   : $black;
+$color-background--nav      : $black;
+$color-background--footer   : $black;
+$color-background--blog     : lighten($vulcan, 10%);
+// $title                      : $french-pass;
+$title           			: lighten($maroon, 8%);
+
+$color-links				: $color-font--light; 
+$color-navigation-links 	: $color-font--light;
+$color-hover				: darken($color-navigation-links, 30%);
+$blog-sidebar-links         : $cornflower-blue;
+
+$base__font-size : em(16px); //also defined p
+$letter-spacing-wide : em(1.3px);
+
+// Calculate em values
+//making the default context our base font size and therefore making this parameter optional
+@function em($target, $context: $base__font-size) {
+    @return ($target / $context) * 1em;
+}
+
+
+

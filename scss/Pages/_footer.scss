@@ -1,0 +1,258 @@
+
+.wrapper-footer {
+    @include  outer-container(1280px);
+       
+        @media only screen and (min-width : 320px) {
+            padding: 4%;
+        }
+        @media only screen and (min-width : 375px) {
+            padding: 4% 8%;
+        }
+        @media only screen and (min-width : 480px) { 
+            padding: 4% 10%;
+        }
+        @media only screen and (min-width : 685px) {
+            //when footer right and middle don't stack
+            padding: 2% 4%;
+        }
+        @media only screen and (min-width : 768px) {
+            padding: 2%;
+        }
+        @media only screen and (min-width : 900px) {
+            padding: 4% 6% 1% 6%;
+            // padding-top: 4%;
+        }
+         @media only screen and (min-width : 1024px) {
+            padding: 2% 2% 1% 2%;     
+        }
+}
+ 
+footer {
+    @include span-columns (12);
+    background-color: $color-background--footer;
+    border-top: 1px solid $color-font--dark;
+    font-size: em(15px);
+    @media only screen and (min-width : 320px) {
+        padding-top: 2%; 
+    }
+    @media only screen and (min-width : 768px) {
+        padding-top: 0%;
+    }
+        p {
+            @media only screen and (min-width : 320px) {
+                font-size: em(15px); 
+            }
+            @media only screen and (min-width : 480px) {
+                font-size: em(15px);
+            }
+            @media only screen and (min-width : 600px) {
+                font-size: em(16px);
+            }
+            @media only screen and (min-width : 768px) {
+                font-size: em(16px);
+
+             }
+                &:hover {
+                    color: $color-font--dark;
+                }
+        }
+        h4 {
+            text-transform: uppercase;
+
+            @media only screen and (min-width : 320px) {
+                font-size: em(20px);
+                margin-bottom: em(36px);
+
+            }
+            @media only screen and (min-width : 480px) {
+                font-size: em(24px);  
+                text-align: left;
+            }
+            @media only screen and (min-width : 600px) {
+
+                margin-top: em(38px);
+                margin-bottom: em(40px);
+            }
+            @media only screen and (min-width : 685px) {
+                font-size: em(22px);
+
+            }
+            @media only screen and (min-width : 768px) {
+                margin-top: em(25px);
+                margin-bottom: em(40px);
+                font-size: em(20px);
+            }
+            @media only screen and (min-width : 1024px) {
+
+            }
+        }
+        a {
+            &:hover {
+                color: $color-font--dark;
+            }
+        }
+} 
+
+.footer-left,
+.footer-middle {
+
+    @media only screen and (min-width : 0px) {
+        @include span-columns (12);
+        margin-bottom: 6%;
+    }
+    @media only screen and (min-width : 685px){
+        margin-bottom: 4%;
+    }
+    @media only screen and (min-width : 685px) {
+        @include span-columns (6 of 12);
+            
+    }
+    @media only screen and (min-width : 1024px) {
+        @include span-columns (4 of 12);  
+            margin-bottom: 0;
+    }
+}
+
+.footer-right {    
+    text-align: center;
+    
+    @media only screen and (min-width : 0px) {
+        @include span-columns (12);
+        margin-right: 0;
+    }
+    @media only screen and (min-width : 768px) {
+            padding: 0 4%;
+    }
+    @media only screen and (min-width : 1024px) {
+        @include span-columns (4 of 12);
+        margin-right: 0;
+        padding: 0 2%;
+    }
+    
+
+    h2 {
+        font-family: $font-family--logo; 
+        color: $title;
+
+            @media only screen and (min-width : 320px) {
+                font-size: em(38px); 
+                border-top: 1px solid white;
+                padding-top: em(60px);
+                padding-bottom: em(10px);
+            }
+            @media only screen and (min-width : 375px) {
+                font-size: em(42px);
+            }
+            @media only screen and (min-width : 480px) {
+                margin-top: 4%;
+            }
+            @media only screen and (min-width : 600px) {    
+                padding-top: em(50px);
+                padding-bottom: 2%;
+                font-size: em(50px);
+            }
+            @media only screen and (min-width : 768px) {
+                font-size: em(50px);
+                // margin-bottom: em(32px);
+                // font-size: em(60px);
+            }
+            @media only screen and (min-width : 1024px) {
+                border-top: none;
+                font-size: em(38px);
+                margin-top: em(18px);
+                margin-bottom: em(34px);
+                padding-top: em(10px);
+                padding-bottom: em(0px);
+            }
+    }
+}
+
+.contact-info .footer-middle {
+    @media only screen and (min-width : 1024px) {
+    margin-right: 2.35765%;
+    }
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    padding: 0 2%;
+        i {
+            position: absolute;
+            font-size: em(18px);   
+            line-height: 1;
+            margin: 0 0 0 -1;
+            vertical-align: middle;
+            padding: .25em .45em;
+            padding-left: 0;
+    }
+}
+
+ul.contact,
+ul.more-info {
+    list-style-type: none;
+    padding: 0;    
+    p {
+        padding-left: 45px;
+    }    
+}
+
+.footer-links a::after {
+    content: "•";
+    padding: 0 0.3rem 0 0.5rem;   
+}
+.footer-links a:last-child::after {
+    content: "";
+}
+
+p.copyright {
+    @media only screen and (min-width : 375px) {
+        margin-top: em(30px);
+        font-size: 15px;
+    }
+    @media only screen and (min-width : 600px) {
+        margin-top: em(60px);
+    }
+    @media only screen and (min-width : 1024px) {
+        margin-top: em(11px);
+    }
+}
+
+span.legends-footer-font {
+    font-family: $font-family--legends, $font-family--logo; 
+    margin-top: em(-5px);
+    text-transform: none;
+    line-height: 1.2;
+    @media only screen and (min-width : 320px) {
+        font-size: em(30px);
+    }
+    @media only screen and (min-width : 480px) { 
+        font-size: em(32px);
+    }
+    @media only screen and (min-width : 1024px) {
+        font-size: em(34px);
+    }
+}
+
+.designer {
+    @include span-columns (12);
+    border-top: 1px solid darken($color-font--dark, 30%);
+    text-align: center;
+    padding-top: 10px;
+    color: $color-font--dark;
+        p {
+            font-size: 12px;
+            margin: 0;
+
+            a:hover {
+                color: $title;
+            }
+        }
+        br.small {
+           @media only screen and (min-width : 375px) {
+                display: none;
+           } 
+        }
+}
+
+

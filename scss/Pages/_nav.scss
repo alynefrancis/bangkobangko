@@ -1,0 +1,153 @@
+
+.nav {
+    @include span-columns (12);
+    a:hover {        
+        color: $color-font--dark;
+        // transition: height 0.5s;
+    }
+}
+
+// basically split into two. One above 1024 and one below where the hamburger shows up
+@media only screen and (max-width : 1024px) {  
+
+    nav {
+        display:block;
+        z-index: 9999;
+        margin: 0 auto;
+        width: 100%;
+      
+        .menu {
+            padding: 0px;
+            height: auto;
+            z-index: 10000;
+            margin-top: 0;
+            margin: 0;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height .4s linear; 
+
+        }
+        .li.nav__item {
+            list-style:none;
+            margin: 0 auto;
+            padding-top: 2px;   
+                
+        }
+        li.nav__item a {
+            display: block;
+            color: $color-font--light;
+            text-decoration:none;
+            text-align: center;
+            margin: 0;
+            text-transform:uppercase;
+            background: $color-background--nav;
+            padding: 10px 0;
+            padding-left: 0;   
+            font-size: 15px;   
+        } 
+        li.nav__item.sub-menu-reveal {
+            display: block;
+            color: $color-font--light;
+            text-decoration:none;
+            text-align: center;
+            margin: 0;
+            text-transform:uppercase;
+            background: $color-background--nav;
+            padding: 10px 0;
+            padding-left: 0;       
+        } 
+        .sub-menu {
+            display:none;
+            list-style: none;
+            padding-left: 0; 
+
+        }
+        li.nav__subitem a {
+            background: $color-background--body;
+            text-transform: capitalize;           
+        }
+        .slide-down {
+            //max-height allows for the transition to work. 
+            max-height: 1000px;
+            transition: max-height .3s linear;           
+        }
+    }
+    .hamburger {
+        cursor:pointer;
+        display: inline-block;
+        padding: 10px 5px 20px 5px;
+        background: $color-background--nav;
+        float: right;
+
+        .line {           
+            margin-bottom: 7px;
+            @media only screen and (min-width : 320px) {
+                width: 26px;
+                border-bottom: 1px solid $color-font--dark;   
+            }
+            @media only screen and (min-width : 480px) {
+                width: 32px;
+                border-bottom: 1.5px solid $color-font--dark;  
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        
+    }
+}
+
+
+
+@media only screen and (min-width : 1025px) {  
+  
+    nav {
+        height: 40px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        background: $color-background--nav;
+        font-size: 16px;
+        border-top: 1px solid #888;
+       
+
+        .menu {  
+          position: relative;
+          overflow: visible;
+          padding: 0;
+          margin: 0;
+          top: 0;
+          text-align: center;
+          transition: all .3s ease-in-out;         
+        }
+
+        li.nav__item {
+            text-transform: uppercase;
+            display: inline-block; 
+            a {
+                padding: 0 30px;
+                line-height: 40px;
+                text-decoration: none;
+                color: $color-font--light;
+                font-weight: 100;  
+
+            }   
+        }
+        .sub-menu  {
+            position:absolute;         
+            @media only screen and (min-width : 1024px) {
+                margin-left: -10%;
+                font-size: 17px;
+            }
+
+            .nav__subitem {
+                line-height: 40px;
+                display: inline-block;
+                text-align: center;                     
+            }
+        }         
+    }  
+        .hamburger {
+            display: none;
+    } 
+}
